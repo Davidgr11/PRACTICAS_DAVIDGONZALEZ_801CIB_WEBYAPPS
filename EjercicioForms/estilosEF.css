@@ -3,9 +3,12 @@ body {
     background-color: #f4f4f4;
     margin: 0;
     padding: 0;
-    background-image: url('BackGroundForms.png');
+    background-image: url('otro-background.png');
     background-size: cover;
     background-position: center;
+    transition: background-color 0.5s ease;
+    height: 100vh;
+    display: flex;
 }
 
 .container {
@@ -15,6 +18,7 @@ body {
     background-color: #fff;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 h2 {
@@ -51,4 +55,34 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
     background-color: #DF4F30;
+}
+
+.btnMode {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+    padding: 10px 20px; /* Ajusta el padding según sea necesario */
+    font-size: 16px; /* Ajusta el tamaño del texto según sea necesario */
+}
+
+.dark-mode .container {
+    background-color: black;
+    color: #fff;
+}
+
+.dark-mode body {
+    background-color: #333;
+}
+
+.dark-mode input[type="submit"]:hover {
+    background-color: #333;
+}
+
+.dark-mode .btnMode button {
+    color: #fff;
+}
+
+.dark-mode .btnMode button:hover {
+    color: #f4f4f4;
 }
